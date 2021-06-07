@@ -119,7 +119,7 @@ return [
     |
      */
 
-    'key' => array_key_exists('APP_ENV', $_SERVER) ? $_SERVER['APP_ENV'] : env('APP_ENV'),
+    'key' => array_key_exists('APP_KEY', $_SERVER) ? $_SERVER['APP_KEY'] : env('APP_KEY'),
 
     'cipher' => 'AES-256-CBC',
 
