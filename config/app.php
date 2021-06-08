@@ -12,8 +12,7 @@ return [
     | any other location as required by the application or its packages.
     |
      */
-
-    'name' => env('APP_NAME', 'Laravel'),
+    'name' => array_key_exists('APP_NAME', $_SERVER) ? $_SERVER['APP_NAME'] : env('APP_NAME', 'AWS TEST'),
 
     /*
     |--------------------------------------------------------------------------
@@ -26,7 +25,7 @@ return [
     |
      */
 
-    'env' => env('APP_ENV', 'production'),
+    'env' => array_key_exists('APP_ENV', $_SERVER) ? $_SERVER['APP_ENV'] : env('APP_ENV', 'production'),
 
     /*
     |--------------------------------------------------------------------------
@@ -39,7 +38,7 @@ return [
     |
      */
 
-    'debug' => (bool) env('APP_DEBUG', false),
+    'debug' => array_key_exists('APP_DEBUG', $_SERVER) ? ($_SERVER['APP_DEBUG'] === 'false' ? false : true) : env('APP_DEBUG'),
 
     /*
     |--------------------------------------------------------------------------
@@ -52,7 +51,7 @@ return [
     |
      */
 
-    'url' => env('APP_URL', 'http://localhost'),
+    'url' => array_key_exists('APP_URL', $_SERVER) ? ($_SERVER['APP_URL'] === 'false' ? false : true) : env('APP_URL', 'http://localhost'),
 
     'asset_url' => env('ASSET_URL', null),
 
@@ -67,7 +66,7 @@ return [
     |
      */
 
-    'timezone' => 'UTC',
+    'timezone' => 'Africa/Lagos',
 
     /*
     |--------------------------------------------------------------------------
