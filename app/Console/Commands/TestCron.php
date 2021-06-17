@@ -3,24 +3,23 @@
 namespace App\Console\Commands;
 
 use Illuminate\Console\Command;
-use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Log;
 
-class AwaitingDisbursement extends Command
+class TestCron extends Command
 {
     /**
      * The name and signature of the console command.
      *
      * @var string
      */
-    protected $signature = 'awaiting:disbursement';
+    protected $signature = 'test:name';
 
     /**
      * The console command description.
      *
      * @var string
      */
-    protected $description = 'Process loans in awaiting Disbursement';
+    protected $description = 'Command description';
 
     /**
      * Create a new command instance.
@@ -39,8 +38,7 @@ class AwaitingDisbursement extends Command
      */
     public function handle()
     {
-        Log::info('awaiting working');
-        Http::post('https: //testapi.creditwallet.ng/api/v2/test/awaitingdisbursement', []);
+        Log::info("Test working");
         return 0;
     }
 }
