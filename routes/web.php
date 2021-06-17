@@ -18,7 +18,8 @@ use Inertia\Inertia;
 
 Route::get('/', function () {
     Log::info("Log is working");
-    return Inertia::render('Welcome', [
+    return 'working'
+    ;return Inertia::render('Welcome', [
         'canLogin' => Route::has('login'),
         'canRegister' => Route::has('register'),
         'laravelVersion' => Application::VERSION,
